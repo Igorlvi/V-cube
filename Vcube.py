@@ -62,12 +62,14 @@ my_pen.forward(a*37)
 my_pen.left(45)
 my_pen.forward((a-2)*37)
 my_pen.hideturtle()
+style = ('Courier', 15, 'italic')
+my_pen.write(" Turtle накреслила\n Вам ваш куб", font=style, align='right')
+turtle.title('Ваш куб')
 
 # matplotlib
 data = np.ones(np.array([1,1,1]))
 fig = plt.figure(figsize=(a, a)) 
 ax = fig.add_subplot(111 , projection = '3d') 
 ax.voxels(data, facecolors=[1,1,1,.5],edgecolor='k')
- 
+plt.title('Ваш куб накреслений на координатній сітці')
 plt.show()
-
